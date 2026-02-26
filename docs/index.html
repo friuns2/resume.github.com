@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>resume.github.com Community Fork Maintenance</title>
+  <style>
+    :root {
+      --bg: #f7f7f2;
+      --ink: #1b1b1b;
+      --accent: #0f766e;
+      --muted: #4b5563;
+      --card: #ffffff;
+      --line: #d1d5db;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--ink); background: linear-gradient(180deg,#eef6f4 0%, var(--bg) 45%); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 80px; }
+    h1,h2 { line-height: 1.2; }
+    h1 { font-size: 2.2rem; margin: 0 0 8px; }
+    .sub { color: var(--muted); margin: 0 0 22px; }
+    nav { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 24px; }
+    nav ul { margin: 0; padding-left: 20px; }
+    section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin: 0 0 16px; }
+    a { color: var(--accent); }
+    code { background: #eef2f7; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>resume.github.com Community Fork</h1>
+    <p class="sub">Maintenance dashboard for merged pull requests and ongoing stewardship.</p>
+
+    <nav aria-label="Table of contents">
+      <strong>Table of Contents</strong>
+      <ul>
+        <li><a href="#purpose">Project Purpose</a></li>
+        <li><a href="#posture">Maintenance Posture</a></li>
+        <li><a href="#merged-prs">Merged Pull Requests</a></li>
+        <li><a href="#risks">Unresolved Risks</a></li>
+        <li><a href="#setup">Setup Instructions</a></li>
+        <li><a href="#next">Next Actions</a></li>
+      </ul>
+    </nav>
+
+    <section id="purpose">
+      <h2>Project Purpose</h2>
+      <p>This project builds resume pages from GitHub account activity to provide a concise public profile for technical candidates.</p>
+    </section>
+
+    <section id="posture">
+      <h2>Maintenance Posture</h2>
+      <p>Upstream activity has slowed, so this fork is maintained as a community triage branch focused on PR review and merge continuity.</p>
+    </section>
+
+    <section id="merged-prs">
+      <h2>Merged Pull Requests</h2>
+      <p>Latest run merged upstream open PRs #241, #249, #250, #252, #259, #263, #264, #265, #271, #275, and #294 into <code>master</code>.</p>
+      <p>See <a href="../PROJECT_SPEC.md">PROJECT_SPEC.md</a> for full per-PR details.</p>
+    </section>
+
+    <section id="risks">
+      <h2>Unresolved Risks</h2>
+      <ul>
+        <li>Legacy dependencies may contain unpatched issues.</li>
+        <li>No modern CI policy currently blocks unsafe merges.</li>
+        <li>External API behavior can change without pinned contract tests.</li>
+      </ul>
+    </section>
+
+    <section id="setup">
+      <h2>Setup Instructions</h2>
+      <p>Install Ruby and Rack, then run <code>rackup config.ru</code> from repository root.</p>
+    </section>
+
+    <section id="next">
+      <h2>Next Actions</h2>
+      <ol>
+        <li>Add CI smoke tests for generated pages.</li>
+        <li>Audit merged PRs for UI/content regressions.</li>
+        <li>Continue hourly PR triage against upstream.</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
